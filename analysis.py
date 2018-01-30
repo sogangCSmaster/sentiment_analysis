@@ -1,15 +1,18 @@
 from textblob import TextBlob
 from googletrans import Translator
+import time
+import sys
+
+a = sys.argv[1]
 
 translator = Translator()
-a = "오픈소스를 활용한 간단한 감성분석 엔진입니다."
-print(a)
+
 engString = translator.translate(a,src='ko')
 engString = engString.text
-print(engString)
 analysis = TextBlob(engString)
-print(analysis.sentiment.polarity)
-if analysis.sentiment.polarity >= 0:
-    print("분석결과 : 긍정 POSITIVE")
-elif analysis.sentiment.polarity < 0:
-    print("분석 결과 : 부정 NEGATIVE")
+posneg = analysis.sentiment.polarity
+
+if posneg >= 0:
+    print("POSITIVE")
+elif posneg < 0:
+    print("NEGATIVE")

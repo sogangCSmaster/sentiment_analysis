@@ -11,6 +11,9 @@ textblob module을 이용한 한국어 감성분석 (used polarity, 극성 탐�
   - textblob (pip3 install textblob)
   - googletrans (pip3 install googletrans)
 
+## how to use
+- python3 analysis.py "간단한 감성분석 엔진입니다."
+
 ### 설명
 코드는 정말 간단합니다. textblob모듈에 있는 sentiment.polarity 객체를 이용하면 극성탐지를 이용한 긍부정이 나옵니다.
 
