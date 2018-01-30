@@ -4,7 +4,7 @@ from googletrans import Translator
 translator = Translator()
 a = "오픈소스를 활용한 간단한 감성분석 엔진입니다."
 print(a)
-engString = translator.translate(a)
+engString = translator.translate(a,src='ko')
 engString = engString.text
 print(engString)
 analysis = TextBlob(engString)
