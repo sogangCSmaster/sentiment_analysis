@@ -12,7 +12,9 @@ engString = engString.text
 analysis = TextBlob(engString)
 posneg = analysis.sentiment.polarity
 
-if posneg >= 0:
+if posneg == 0:
+    print("NEUTRAL")
+if posneg > 0:
     print("POSITIVE")
 elif posneg < 0:
     print("NEGATIVE")
